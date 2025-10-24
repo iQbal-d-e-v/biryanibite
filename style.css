@@ -1,0 +1,357 @@
+:root {
+    --primary-color:#d02929;
+    --secondary-color: #5f9ea0;
+    --background-color: #ffffff;
+    --font-color: #333333;
+}
+.color-shift {
+    background-color: #7d654d;
+    color: white;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.text-container {
+    background-color: var(--secondary-color);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img-container {
+    background-color: var(--primary-color);
+    width: 50%;
+    height: 100%;
+}
+
+.img #biryani-img {
+    height: 1vh;
+    width: 1vw;
+    border-radius: 50px;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: var(--background-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    position: relative;
+}
+
+#logo-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+nav .social #logo {
+    margin-right: 20px;
+    color: #4a1010;
+    font-size: 46px;
+    cursor: pointer;
+}
+
+.social-ham {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(245, 222, 179, 0.297);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.social-ham ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 33px;
+    margin-top: 80px;
+    padding: 1vh;
+}
+
+.social>ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    margin-right: 3vmax;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+ul li a:hover {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#ham {
+    display: none;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.home {
+    height: calc(100% - 80px);
+    width: 100%;
+    background-image: url("images/Biryani\ House.jpg");
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+
+.home>.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000074;
+    backdrop-filter: blur(1.75px);
+    z-index: 1;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 80px);
+}
+
+.home h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    z-index: 2;
+    font-family: 'poppins', sans-serif;
+}
+
+.home p {
+    font-size: 24px;
+    z-index: 2;
+}
+
+.home p span {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.home button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.home h1,
+.home p,
+.home button {
+    position: relative;
+    z-index: 2;
+}
+
+.home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+}
+
+.home p {
+    font-size: 1.3rem;
+    animation: fadeInUp 1.2s ease;
+}
+
+.home button {
+    animation: fadeInUp 1.4s ease;
+}
+
+.page {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding-top: 6vh;
+}
+
+.image-size {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ri-instagram-line {
+    font-size: 24px;
+}
+
+.show {
+    display: flex;
+    animation: slideleft 0.4s ease;
+
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        width: 100%;
+        height: 40%;
+    }
+
+    .text-container {
+        width: 100%;
+        height: 50%;
+    }
+
+    .home,
+    .page {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0px;
+
+    }
+
+    .home h1 {
+        font-size: 2.3rem;
+    }
+
+    .home #para2 {
+        font-size: 1rem;
+        margin-top: 1vh;
+        padding: 1vh;
+    }
+
+    nav .social ul {
+        display: none;
+    }
+
+    .text {
+        background-color: rgba(250, 235, 215, 0.429);
+        width: 100%;
+        height: 50%;
+    }
+
+    nav #logo-img {
+        margin: 7px 0px 1px 6px;
+    }
+
+    #ham {
+        display: block;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .reverse-column {
+        flex-direction: column-reverse;
+    }
+
+    .social-ham.active {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .home h1 span {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 68px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
+}
+    
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
