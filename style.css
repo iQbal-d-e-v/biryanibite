@@ -1,14 +1,10 @@
 :root {
-    --primary-color:#d02929;
-    --secondary-color: #5f9ea0;
+    --primary-color: #d02929;
+    --secondary-color: #7d654d;
+    --light-secoundry-color: #edd2b86e;
     --background-color: #ffffff;
     --font-color: #333333;
 }
-.color-shift {
-    background-color: #7d654d;
-    color: white;
-}
-
 
 * {
     margin: 0;
@@ -76,11 +72,11 @@ nav .social #logo {
     display: none;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     flex-direction: column;
     background-color: rgba(245, 222, 179, 0.297);
     backdrop-filter: blur(15px);
-    width: 100%;
+    width: 85%;
     height: 100%;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -114,6 +110,7 @@ ul li a {
     transition: color 0.3s ease;
     font-size: 1.2rem;
 }
+
 ul li a:hover {
     color: var(--primary-color);
     font-size: 22px;
@@ -136,7 +133,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .home>.box {
@@ -244,8 +241,30 @@ footer {
 
 .show {
     display: flex;
-    animation: slideleft 0.4s ease;
+    animation: slideleft 0.5s ease-out;
 
+}
+
+.dark-color {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.light-color {
+    background-color: var(--light-secoundry-color);
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    /* how far the fade spreads outward */
+    border-radius: inherit;
+    background: #dcdcdc;
+    /* your border color */
+    filter: blur(12px);
+    /* softness strength */
+    z-index: -1;
 }
 
 @media screen and (max-width: 768px) {
@@ -288,7 +307,9 @@ footer {
     }
 
     nav #logo-img {
-        margin: 7px 0px 1px 6px;
+        margin: 3px 0px -1px 15px;
+        height: 60px;
+        width: 60px;
     }
 
     #ham {
@@ -311,12 +332,12 @@ footer {
 
 @media screen and (min-width: 900px) {
     .home h1 span {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 68px;
-    -webkit-text-stroke: 1px rgb(255, 255, 255); 
-}
-    
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 68px;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+    }
+
 }
 
 @keyframes fadeInDown {
