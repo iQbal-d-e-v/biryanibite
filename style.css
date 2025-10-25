@@ -28,6 +28,20 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 15px;
+}
+
+.text-container h1 {
+    font-size: 40px;
+    padding: 8px 32px;
+}
+.text-container h1 span {
+    color: var(--primary-color);
+}
+
+.text-container p {
+    font-size: 25px;
+    padding: 8px 32px;
 }
 
 .img-container {
@@ -35,6 +49,7 @@ body {
     width: 50%;
     height: 100%;
 }
+
 
 .img #biryani-img {
     height: 1vh;
