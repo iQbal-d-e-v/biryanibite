@@ -3,10 +3,10 @@
     --secondary-color: #7d654d;
     --light-secoundry-color: #edd2b86e;
     --background-color: #ffffff;
-    --ff: "Inter", sans-serif;
+    --ff: "Poppins", sans-serif;
     --h1: bold 2.4rem / 1.4em var(--ff);
     --h2: bold 1.875rem / 1.4em var(--ff);
-    --p: 1rem / 1.4em var(--ff);
+    --p: 1.4rem / 1.4em var(--ff);
     --p2: .875rem / 1.4em var(--ff);
     --h1-m: bold 1.3rem / 1.4em var(--ff);
     --h2-m: bold 1rem / 1.4em var(--ff);
@@ -49,7 +49,7 @@ html, body {
     font: var(--h2);
 }
 .text-container p {
-   font: var(--p2);
+   font: var(--p);
     padding: 8px 32px;
 }
 
@@ -72,7 +72,7 @@ nav {
     background: var(--background-color);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 1000;
     position: relative;
@@ -124,7 +124,7 @@ nav .social #logo {
     display: flex;
     gap: 15px;
     font-size: 24px;
-    margin-right: 3vmax;
+    margin-left: 2vmax;
 }
 
 ul li a {
